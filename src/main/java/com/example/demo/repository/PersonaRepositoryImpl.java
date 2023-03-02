@@ -31,13 +31,9 @@ public class PersonaRepositoryImpl implements IPersonaRepository {
 
 	@Override
 	public Persona buscarPorId(Integer id) {
-		// TODO Auto-generated method stub
-		
-		Query query = this.entityManager.createQuery("SELECT p FROM Persona p WHERE p.id =:datoId");
-		query.setParameter("datoId", id);
-		
-		return (Persona)query.getSingleResult();
+		return this.entityManager.find(Persona.class, id);
 	}
+
 
 	@Override
 	public void actualizar(Persona persona) {

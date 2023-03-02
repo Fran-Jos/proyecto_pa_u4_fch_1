@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<form th:action="@{/personas/actualizar/{id}(id=${persona.id})}" th:object="${persona}" th:method="PUT">
+	<form th:action="@{/personas/insertar}" th:object="${persona}" th:method="POST">
 		<table>
 			<tr>
 				<td><label>Nombre:</label></td>
@@ -31,7 +31,7 @@
 				<td><input type="text" id="genero" th:field="${persona.genero}"></td>
 			</tr>
 		</table>
-		<input type="submit" value="Actualizar">
+		<input type="submit" value="Guardar">
 	</form>
 </body>
 
